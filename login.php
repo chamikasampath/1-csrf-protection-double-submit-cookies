@@ -2,14 +2,11 @@
 <html>
 	<head>
 
-        <title>User Login</title>
+        <title>CSRF Protection!</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
--->
+      
 
         <link rel="stylesheet" href="public/css/bootstrap.min.css">
         <script src="public/js/jquery.min.js"></script>
@@ -18,7 +15,7 @@
 
     </head>
 
-    <body>
+    <body style="background-image: url('/1-csrf-protection-double-submit-cookies/background1.jpg');color: white;">
 
       <div class="container">
         <h2> User Login </h2>
@@ -79,7 +76,7 @@
 
         $token = generate_token();
 
-        setcookie('csrf_token', $token, time() + 300, '/', 'localhost',true);
+        setcookie('csrf_token', $token, time() + 300, '/', '',true);
 
         header("Location:profile.php");
         exit;

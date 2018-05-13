@@ -2,7 +2,7 @@
 <html>
   <head>
 
-        <title>User Login</title>
+        <title>CSRF Protection!</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,12 +18,13 @@
 
     </head>
 
-    <body>
+    <body style="background-image: url('/1-csrf-protection-double-submit-cookies/background1.jpg');color: white;">
+
       <!-- navbar start -->
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">CSRF Protection</a>
+            <a class="navbar-brand" href="index.php">CSRF Protection!</a>
           </div>
           <ul class="nav navbar-nav">
 

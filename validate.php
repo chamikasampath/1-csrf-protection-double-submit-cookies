@@ -2,14 +2,11 @@
 <html>
   <head>
 
-        <title>User Login</title>
+        <title>CSRF Protection!</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
--->
+      
 
         <link rel="stylesheet" href="public/css/bootstrap.min.css">
         <script src="public/js/jquery.min.js"></script>
@@ -18,12 +15,13 @@
 
     </head>
 
-    <body>
+    <body style="background-image: url('/1-csrf-protection-double-submit-cookies/background1.jpg');color: white;">
+
       <!-- navbar start -->
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">CSRF Protection</a>
+            <a class="navbar-brand" href="index.php">CSRF Protection!</a>
           </div>
           <ul class="nav navbar-nav">
 
@@ -57,7 +55,7 @@
         <div class="row" align="center" style="padding-top: 100px;">
           <div class="col-12">
             <div class="card">
-              <h5 class="card-header">Profile Details</h5>
+              <h3 class="card-header">-Your Profile Details-</h3>
               <div class="card-body">
                 <div class="row">
                   <div class="col-sm-2"></div>
@@ -75,15 +73,15 @@
           								$address=$_POST['address'];
           								$email=$_POST['email'];
 
-          								echo "<div class='alert alert-primary' role='alert'>".$fname."</div>";
-          								echo "<div class='alert alert-secondary' role='alert'>".$nic."</div>";
+          								echo "<div class='alert alert-success' role='alert'>".$fname."</div>";
+          								echo "<div class='alert alert-info' role='alert'>".$nic."</div>";
           								echo "<div class='alert alert-success' role='alert'>".$address."</div>";
           								echo "<div class='alert alert-info' role='alert'>".$email."</div>";
 
           							}
           							else
           							{
-          								echo "<script>alert('WARNING :: CSRF Found !!!')</script>";
+          								echo "<script>alert('<< CAUTION >> :: CSRF is Found!')</script>";
           							}
 
           						}
